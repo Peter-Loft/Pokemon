@@ -10,14 +10,17 @@ import Pokecard from "./Pokecard.js";
  */
 
 function Pokedex({ pokemons }) {
+  console.log("in Pokedex fn, line 13 pokemons = ", pokemons);
   return (
-    <div className="Pokedex">
+    <div className="Pokedex row">
       {pokemons.map(pokemon => (<Pokecard
         id={pokemon.id}
         name={pokemon.name}
         type={pokemon.type}
         base_experience={pokemon.base_experience} />))}
     </div>
+    //don't call Pokecard in the map; again we NEVER call a component ourselves like a fn; have React do it and pass in props with {}
+    //we're more RENDERING them
   );
 }
 

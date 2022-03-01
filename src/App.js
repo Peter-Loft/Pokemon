@@ -1,6 +1,7 @@
-// import React from "react";
+// import Pokecard from "./Pokecard.js" 
+// we don't need this bc the person who designs App shouldn't have to know what Pokedex needs (Pokecard)---only knows that App needs Pokedex
 
-import Pokedex from "./Pokedex.js";
+import Pokegame from "./Pokegame.js";
 
 /**
  * This should just render a single Pokedex component.
@@ -21,7 +22,13 @@ function App(){
         {id: 133, name: 'Eevee',      type: 'normal',   base_experience: 65}
       ];
 
-    return <Pokedex pokemons = {pokemonInfo} />
+    return (
+        <div className="App container">
+            <Pokegame PokeList={pokemonInfo} />
+        </div>
+    )
+    //you should NEVER call the component yourself--pass in props and have React do it for you
+    //don't forget to pass in props with {}
 }
 
 export default App;
