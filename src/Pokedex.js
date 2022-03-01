@@ -1,4 +1,4 @@
-import Pokecard from "./Pokecard";
+import Pokecard from "./Pokecard.js";
 
 /**
  * Is provided, via props, an array of objects describing different 
@@ -11,8 +11,11 @@ import Pokecard from "./Pokecard";
 
 function Pokedex(pokemons) {
   return (
-  <div>
-    
+  <div className="Pokedex">
+    {pokemons.map(pokemon => Pokecard(pokemon))}
   </div>
   );
 }
+
+
+export default Pokedex; 
