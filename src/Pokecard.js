@@ -1,7 +1,7 @@
 
 /** Shows a single Pokemon, with their name, image, and type.
  *  @param accepts object: 
- * {id: 4,   name: 'Charmander', type: 'fire',     base_experience: 62}
+ * {id: 4, name: 'Charmander', type: 'fire', base_experience: 62}
  * 
  * returns HTML for card.
  */
@@ -14,7 +14,7 @@ function Pokecard({id, name, type, base_experience}) {
       </h3>
       <img className = "Pokecard-img" src = {img_url} alt= {`This is ${name}`} />
       <p className="Pokecard-type-p">
-        {`Type: ${type}`}
+        Type: {type}
       </p>
       <p className="Pokecard-exp-p">
         {`EXP: ${base_experience}`}

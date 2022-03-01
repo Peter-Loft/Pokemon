@@ -1,11 +1,14 @@
 // import React from "react";
-// import Pokecard from "./Pokecard.js";  TODO: do we need this?
+
 import Pokedex from "./Pokedex.js";
 
 /**
  * This should just render a single Pokedex component.
- * @returns 
+ * with all the pokecards added within.
+ * @returns Pokedex component.
  */
+// never call components yourself, React does
+// 
 function App(){
     const pokemonInfo = [
         {id: 4,   name: 'Charmander', type: 'fire',     base_experience: 62},
@@ -18,8 +21,7 @@ function App(){
         {id: 133, name: 'Eevee',      type: 'normal',   base_experience: 65}
       ];
 
-
-    return Pokedex(pokemonInfo);
+    return <Pokedex pokemons = {pokemonInfo} />
 }
 
 export default App;
